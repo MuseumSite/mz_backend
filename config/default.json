@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "8a798f798Y8YH98DFH8FYH98yh98hsd8f312sdwDSvfd",
+  "mongoUri": "mongodb+srv://pavelz:0mv47gh23j@cluster0.xmqmk.mongodb.net/db-museum?retryWrites=true&w=majority"
+}
