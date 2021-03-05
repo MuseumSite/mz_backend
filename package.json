@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "client": "npm run start --prefix mz_frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "museum",
@@ -19,7 +21,8 @@
     "express": "^4.17.1",
     "express-validator": "^6.9.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.11.12"
+    "mongoose": "^5.11.12",
+    "update": "^0.7.4"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
