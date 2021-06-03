@@ -9,6 +9,9 @@
 #IDE
 .idea
 
+#frontend
+/mz_frontend
+
 # testing
 /coverage
 
