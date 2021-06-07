@@ -15,12 +15,11 @@ const ns = new News({title: "title", description_news: "desc"})
 router.get('/all', async (req, res) => {
     try {
         News.find({}, (err, data) => {
-            console.log(data)
             if (err) {
                 console.log(err)
                 return res.status(500).send()
             } else {
-                return res.status(200).json(data[0])
+                return res.status(200).json(data)
             }
         })
     } catch (e) {
@@ -31,9 +30,9 @@ router.get('/all', async (req, res) => {
 // /api/news/add
 router.post('/add', async (req, res) => {
     try {
-        const {title, description, date} = req.body
+        const {title, description, img, date} = req.body
         console.log(title, description)
-        const news = new News({title, description_news: description, date_news: date})
+        const news = new News({title, description_news: description, img_path: img, date_news: date})
         await news.save()
         res.status(201).json({message: 'Данные добавленны'})
     } catch (e) {

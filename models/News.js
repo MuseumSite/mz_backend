@@ -3,6 +3,7 @@ const {Schema, model, Types} = require('mongoose')
 const schema = new Schema({
     title: {type: String, required: true, unique: true},
     description_news: {type: String, required: true},
+    img_path: {type: String, required: true},
     date_news: {type: Date, default: Date.now}
 })
 
