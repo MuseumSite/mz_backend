@@ -13,7 +13,6 @@ router.use(cors({
     ]
 }));
 
-// /api/auth/register
 router.post(
     '/register',
     [
@@ -49,7 +48,6 @@ router.post(
         }
     })
 
-// /api/auth/login
 router.post(
     '/login',
     [

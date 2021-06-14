@@ -1,7 +1,7 @@
 const cors = require("cors");
 const {Router} = require('express')
 const router = Router()
-const News = require('../models/News')
+const News = require('../models/Poster')
 
 router.use(cors({
     allowedOrigins: [
@@ -28,9 +28,9 @@ router.get('/all', async (req, res) => {
 
 router.post('/all', async (req, res) => {
     try {
-        const {title, description_news, img_path, date_news} = req.body
-        const news = new News({title, description_news, img_path, date_news})
-        await news.save()
+        const {title, description, img, date} = req.body
+        const poster = new Poster({title, description_poster: description, img_path: img, date_poster: date})
+        await poster.save()
         res.status(201).json({message: 'Данные добавленны'})
     } catch (e) {
         res.status(500).json({message: 'Чтото пошло не так, попробуйте снова'})
